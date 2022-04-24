@@ -1,8 +1,3 @@
-// const name = document.querySelector("input#nome");
-// const altura = document.querySelector("#altura");
-// const peso = document.querySelector("#peso");
-// const calcular = document.querySelector("#calcular");
-// const resultado = document.querySelector("#valor");
 let resultado = document.getElementById("valor");
 let btnCalcular = document.getElementById("calcular");
 
