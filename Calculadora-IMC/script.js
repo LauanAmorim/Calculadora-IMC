@@ -12,7 +12,22 @@ function calcularImc(){
         $inputAltura = $inputAltura.replace(",", ".")
 
         let $result = Number($inputPeso) / Math.pow(Number($inputAltura), 2)
-        $resultado.textContent = `Olá ${$inputName}, seu IMC é igual a ${$result.toFixed(2)}`;
+
+        let $classificacao = ""
+        if($result < 18.5){
+            $classificacao = `abaixo do peso`;
+        }else if($result < 25){
+            $classificacao = `no peso ideal, parabéns!!`
+        }else if($result < 30){
+            $classificacao = `acima do peso`
+        }else if($result < 35) {
+            $classificacao = `obesidade grau I`
+        }else if($result < 40){
+            $classificacao = `obesidade grau II`
+        }else{
+            $classificacao = `obesidade grau III`
+        }
+        $resultado.textContent = `Olá ${$inputName}, seu IMC é ${$result.toFixed(2)} e você está ${$classificacao}`;
     }
 }
 
